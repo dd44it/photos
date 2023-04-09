@@ -16,16 +16,16 @@ body {
     border-bottom: 1px solid var(--border-bottom-line);
 }
 
-.nav > * {
+.header .nav > * {
     line-height: 72px;
 }
 
-.nav .active {
+.header .nav .active {
     color: var(--dark);
     border-bottom: 2px solid var(--orange);
 }
 
-.nav > * :not(.active) {
+.header .nav > * :not(.active) {
     color: var(--dark-grey);
 }
 
