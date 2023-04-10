@@ -95,3 +95,28 @@ body {
     width: 24px;
     height: 24px;
 }
+
+.title {
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--dark);
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.btn-group .btn-active {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.btn-group > .btn:not(.btn-active) {
+    color: var(--dark);
+    border: 2px solid var(--border-bottom-line);
+    border-left-color: transparent;
+
+}
+.btn-group > .btn:not(.btn-active):hover {
+    border-left-color: transparent;
+}
