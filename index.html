@@ -13,34 +13,39 @@
 </head>
 <body>
     
-    <header class="header d-flex">
+    <header class="header">
         <div class="container-fluid custom-container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-md-3">
-                    <nav>
-                        <ul class="nav justify-content-start">
-                            <li><a href="" class="nav-link p-0 fw-bold active">Photos</a></li>
-                            <li><a href="" class="nav-link p-0 ms-4 ">Videos</a></li>
-                            <li><a href="" class="nav-link p-0 ms-4">Podcasts</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <form class="d-flex" role="search">
-                                <div class="input-group search-wrapper">
-                                    <span class="input-group-text  bg-transparent" id="basic-addon1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                                        </svg>
-                                    </span>
-                                    <input type="search" class="form-control bg-transparent ps-0 search-input" aria-label="Search" placeholder="Search for anything..." >
-                                </div>
-                            </form>
+            <nav class="navbar navbar-expand-lg p-0">
+                <a href="" class="nav-link p-0 fw-bold me-4 active">Photos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav align-items-center w-100 gap-3">
+                        <div class="col-lg-2 collapse navbar-collapse me-auto" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto gap-4">
+                                <li class="nav-item">
+                                <a href="" class="nav-link p-0">Videos</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="" class="nav-link p-0">Podcasts</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-3 p-0 d-flex justify-content-end">
-                            <div class="dropdown me-1">
+
+                        <form class="col-12 col-lg-6 d-flex" role="search">
+                            <div class="input-group search-wrapper">
+                                <span class="input-group-text  bg-transparent" id="basic-addon1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                    </svg>
+                                </span>
+                                <input type="search" class="form-control bg-transparent ps-0 search-input" aria-label="Search" placeholder="Search for anything..." >
+                            </div>
+                        </form>
+
+                        <div class="col-lg-3 d-flex">
+                            <div class="dropdown">
                                 <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     English
                                 </button>
@@ -52,9 +57,9 @@
                             </div>
                             <button class="btn btn-transparent">Sign in</button>
                         </div>
-                    </div>
+                    </ul>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
     <main class="main mt-5">

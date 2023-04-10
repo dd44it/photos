@@ -16,16 +16,17 @@ body {
     border-bottom: 1px solid var(--border-bottom-line);
 }
 
-.header .nav > * {
+.header .nav-link.active {
     line-height: 72px;
-}
-
-.header .nav .active {
     color: var(--dark);
     border-bottom: 2px solid var(--orange);
 }
 
-.header .nav > * :not(.active) {
+.header .nav-link {
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-item:not(.active) {
     color: var(--dark-grey);
 }
 
@@ -57,13 +58,13 @@ body {
     line-height: 150%;
 }
 
-.aside .nav .active {
+.tab-nav .nav .active {
     background-color: var(--orange);
     color: var(--white);
     font-weight: 700;
 }
 
-.aside .nav .nav-link:not(.active) {
+.tab-nav .nav .nav-link:not(.active) {
     color: var(--dark-grey);
     font-weight: 700;
     line-height: 24px;
