@@ -39,6 +39,7 @@ body {
     border-radius: 100px;
     background-color: var(--light-grey);
     height: 40px;
+    width: 546px;
 }
 
 .search-wrapper > * {
@@ -58,6 +59,10 @@ body {
     line-height: 150%;
 }
 
+.main {
+    padding-top: 2.5rem;
+}
+
 .tab-nav .nav .active {
     background-color: var(--orange);
     color: var(--white);
@@ -72,22 +77,23 @@ body {
 
 .nav-pills .nav-link {
     border-radius: .5rem;
+    width: 273px;
 }
 
 .nav-link .bi-photo {
-    background: url("/assets/images/sidebar/pictures.svg");
+    background-image: url('../images/sidebar/pictures.svg');
 }
 
 .nav-link .bi-smile {
-    background: url("/assets/images/sidebar/smile.svg");
+    background: url("../images/sidebar/smile.svg");
 }
 
 .nav-link .bi-recant {
-    background: url("/assets/images/sidebar/time.svg");
+    background: url("../images/sidebar/time.svg");
 }
 
 .nav-link .bi-trash {
-    background: url("/assets/images/sidebar/trash.svg");
+    background: url("../images/sidebar/trash.svg");
 }
 
 .nav-link .bi {
