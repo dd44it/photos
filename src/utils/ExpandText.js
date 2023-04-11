@@ -15,7 +15,7 @@ class ExpandText {
   checkText(){
     this.removeEmptySpaces();
     this.collectionSelector.forEach(cardElem => {
-      if (cardElem.clientHeight > this.maxHeight) {
+      if (cardElem.clientHeight > this.maxHeight && !cardElem.nextElementSibling ) {
         const copyFullText = cardElem.textContent.slice();
         const copyShortText = cardElem.textContent.slice(0, this.countWord) + "...";
         cardElem.textContent = copyShortText;
