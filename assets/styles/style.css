@@ -166,3 +166,7 @@ body {
 .card-description { 
     color: var(--dark-grey);
 }
+
+.footer {
+    height: 1px;
+}
