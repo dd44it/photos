@@ -4,7 +4,7 @@
     --dark: #292929;
     --orange: #ED7135;
     --white: #FFF;
-    --border-bottom-line: #EBEBEB;
+    --white-grey: #EBEBEB;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    border-bottom: 1px solid var(--border-bottom-line);
+    border-bottom: 1px solid var(--white-grey);
 }
 
 .header .nav-link.active {
@@ -22,8 +22,9 @@ body {
     border-bottom: 2px solid var(--orange);
 }
 
-.header .nav-link {
+.nav-link {
     font-size: 1rem;
+    color: var(--dark-grey);
 }
 
 .navbar-nav .nav-item:not(.active) {
@@ -42,7 +43,6 @@ body {
         width: 546px;
     }
 }
-
 
 .search-wrapper {
     border-radius: 100px;
@@ -71,21 +71,8 @@ body {
     padding-top: 2.5rem;
 }
 
-.tab-nav .nav .active {
-    background-color: var(--orange);
-    color: var(--white);
-    font-weight: 700;
-}
-
-.tab-nav .nav .nav-link:not(.active) {
-    color: var(--dark-grey);
-    font-weight: 700;
-    line-height: 24px;
-}
-
 .nav-pills .nav-link {
     border-radius: .5rem;
-    /* width: 17rem; */
 }
 
 .nav-link .bi-photo {
@@ -122,19 +109,47 @@ body {
     color: var(--dark-grey);
 }
 
-.btn-group .btn-active {
+.btn-primary {
+    background-color: var(--orange);
+    color: var(--white);
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--dark);
+    border: 2px solid var(--orange);
+}
+
+.btn-primary:hover .bi {
+    background-color: var(--orange);
+}
+
+.btn-dark {
     background-color: var(--dark);
     color: var(--white);
 }
 
-.btn-group > .btn:not(.btn-active) {
+.btn-dark:hover {
+    background-color: var(--light-grey);
     color: var(--dark);
-    border: 2px solid var(--border-bottom-line);
-    border-left-color: transparent;
-
 }
-.btn-group > .btn:not(.btn-active):hover {
+
+.btn-secondary {
+    color: var(--dark);
+    border: 2px solid var(--white-grey);
+    background: transparent;
+}
+
+.btn-secondary-mix {
+    color: var(--dark);
+    border: 2px solid var(--white-grey);
     border-left-color: transparent;
+}
+
+.btn-secondary-mix:hover {
+    background: var(--dark-grey);
+    color: var(--white);
 }
 
 .title-wrapper {
@@ -150,14 +165,4 @@ body {
 
 .card-description { 
     color: var(--dark-grey);
-}
-
-.photo-card .btn-active {
-    background-color: var(--orange);
-    color: var(--white);
-}
-
-.photo-card .btn:not(.btn-active) {
-    color: var(--dark);
-    border: 2px solid var(--border-bottom-line);
 }
