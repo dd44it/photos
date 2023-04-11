@@ -42,6 +42,9 @@ body {
     .search-wrapper {
         width: 546px;
     }
+    .photo-card {
+        width: 22rem;
+    }
 }
 
 .search-wrapper {

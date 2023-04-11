@@ -30,7 +30,7 @@ class LoadNewPhotos {
     if (data && !data.length || !data) return;
     data.forEach((item) => {
       const cardTemplate = `
-      <div class="col-5 card photo-card p-0" style="width: 22rem;">
+      <div class="col-10 col-md-5 card photo-card p-0">
         <img src=${item.download_url} class="card-img-top" alt="">
         <div class="card-body px-4">
             <h3 class="card-title fw-bold">Heading</h3>
