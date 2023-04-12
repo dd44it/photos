@@ -5,6 +5,8 @@
     --orange: #ED7135;
     --white: #FFF;
     --white-grey: #EBEBEB;
+    --day-theme: #F5F5F5;
+    --night-theme: #292929;
 }
 
 body {
@@ -12,19 +14,57 @@ body {
     color: var(--dark-grey);
 }
 
-.header {
+.day {
+    background: var(--day-theme);
+}
+
+.night {
+    background: var(--night-theme);
+}
+
+.day .header {
     border-bottom: 1px solid var(--white-grey);
+}
+
+.night .header {
+    border-bottom: 1px solid var(--dark-grey);
 }
 
 .header .nav-link.active {
     line-height: 72px;
-    color: var(--dark);
+    position: relative;
+}
+
+.header .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 100%;
     border-bottom: 2px solid var(--orange);
+}
+
+.day .header .nav-link.active {
+    color: var(--dark);
+}
+
+.night .header .nav-link.active {
+    color: var(--day-theme);
 }
 
 .nav-link {
     font-size: 1rem;
+}
+
+.day .nav-link,
+.day .btn {
     color: var(--dark-grey);
+}
+
+.night .nav-link,
+.night .btn {
+    color: var(--day-theme);
 }
 
 .navbar-nav .nav-item:not(.active) {
@@ -47,9 +87,16 @@ body {
     }
 }
 
+.day .search-wrapper {
+    background-color: var(--light-grey);
+}
+
+.night .search-wrapper {
+    background-color: var(--dark-grey);
+}
+
 .search-wrapper {
     border-radius: 100px;
-    background-color: var(--light-grey);
     height: 40px;
 }
 
@@ -63,8 +110,19 @@ body {
     outline: none;
 }
 
-.search-input::placeholder {
+.day .search-input::placeholder {
     color: var(--dark-grey);
+}
+
+.night .search-input::placeholder {
+    color: var(--white-grey);
+}
+
+.night .search-input {
+    color: var(--white);
+}
+
+.search-input::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -76,6 +134,10 @@ body {
 
 .nav-pills .nav-link {
     border-radius: .5rem;
+}
+
+.nav-pills .btn-primary  {
+    color: var(--white);
 }
 
 .nav-link .bi-photo {
@@ -104,12 +166,23 @@ body {
 .title {
     font-size: 40px;
     line-height: 60px;
+}
+
+.day .title {
     color: var(--dark);
+}
+
+.night .title {
+    color: var(--day-theme);
 }
 
 .subtitle {
     font-size: 14px;
     color: var(--dark-grey);
+}
+
+.day .btn-primary  {
+    color: var(--white);
 }
 
 .btn-primary {
@@ -124,17 +197,33 @@ body {
     border: 2px solid var(--orange);
 }
 
+.night .btn-primary:hover {
+    background-color: transparent;
+    color: var(--white-grey);
+    border: 2px solid var(--orange);
+}
+
 .btn-primary:hover .bi {
     background-color: var(--orange);
 }
 
-.btn-dark {
+.day .btn-dark {
     background-color: var(--dark);
     color: var(--white);
 }
 
-.btn-dark:hover {
+.day .btn-dark:hover {
     background-color: var(--light-grey);
+    color: var(--dark);
+}
+
+.night .btn-dark {
+    background-color: var(--day-theme);
+    color: var(--dark);
+}
+
+.night .btn-dark:hover {
+    background-color: var(--dark-grey);
     color: var(--dark);
 }
 
@@ -144,13 +233,38 @@ body {
     background: transparent;
 }
 
-.btn-secondary-mix {
+.day .btn-secondary-mix {
     color: var(--dark);
     border: 2px solid var(--white-grey);
     border-left-color: transparent;
 }
 
-.btn-secondary-mix:hover {
+.day .btn-secondary-mix:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+.night .btn-secondary-mix {
+    color: var(--day-theme);
+    border: 2px solid var(--day-theme);
+    border-left-color: transparent;
+}
+
+.night .btn-secondary-mix:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+.day .card-footer {
+    background-color: var(--white);
+}
+
+.night .card-footer{
+    border-color: var(--white-grey);
+}
+
+.night .card-body,
+.night .card-footer {
     background: var(--dark-grey);
     color: var(--white);
 }
@@ -163,13 +277,50 @@ body {
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 4px;
+}
+
+.day .card-title {
     color: var(--dark);
 }
 
-.card-description { 
+.night .card-title {
+    color: var(--white);
+}
+
+.day .card-description { 
     color: var(--dark-grey);
+}
+
+.night .card-description {
+    color: var(--white-grey);
+}
+
+.night .card {
+    border: none;
 }
 
 .footer {
     height: 1px;
+}
+
+.sun {
+    background: url("../images/theme/sun_icon.svg");
+}
+
+.moon {
+    background: url("../images/theme/moon_icon.svg");
+}
+
+.btn-switch-theme {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+}
+
+.sun:hover,
+.moon:hover {
+    filter: contrast(200%);
 }
