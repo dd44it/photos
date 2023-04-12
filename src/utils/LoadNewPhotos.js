@@ -36,7 +36,7 @@ class LoadNewPhotos {
             <h3 class="card-title fw-bold">Heading</h3>
             <p class="card-description">And here full text doesn’t fit, and at the very end of it we should show a Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, similique quasi nam praesentium voluptas, animi quidem consequatur eveniet nobis vel magni veniam natus et nulla eligendi labore ducimus rerum soluta!</p>
         </div>
-        <div class="card-footer p-3 bg-white">
+        <div class="card-footer p-3">
             <button class="btn fw-bold btn-primary me-3">Save to collection</button>
             <button class="btn fw-bold btn-secondary">Share</button>
         </div>
